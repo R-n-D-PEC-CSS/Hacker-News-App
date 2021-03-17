@@ -37,20 +37,31 @@ class NewsListTile extends StatelessWidget {
     return Column(
       children: [
         ListTile(
+          tileColor: Colors.black,
           onTap: () {
             Navigator.pushNamed(context, '/${item.id}');
           },
-          title: Text(item.title),
-          subtitle: Text('${item.score} points'),
+          title: Text(
+            item.title,
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          subtitle: Text(
+            '${item.score} points',
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
           trailing: Column(
             children: [
-              Icon(Icons.comment),
+              Icon(
+                Icons.comment,
+                color: Colors.white,
+              ),
               Text('${item.descendants}'),
             ],
           ),
-        ),
-        Divider(
-          height: 8.0,
         ),
       ],
     );

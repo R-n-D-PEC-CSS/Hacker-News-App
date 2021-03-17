@@ -22,14 +22,19 @@ class Comment extends StatelessWidget {
 
         final children = <Widget>[
           ListTile(
+            tileColor: Colors.black,
             title: buildText(item),
-            subtitle: item.by == "" ? Text("Deleted") : Text(item.by),
+            subtitle: item.by == ""
+                ? Text("Deleted")
+                : Text(
+                    item.by,
+                    style: TextStyle(color: Colors.white),
+                  ),
             contentPadding: EdgeInsets.only(
               right: 16.0,
               left: (depth + 1) * 16.0,
             ),
           ),
-          Divider(),
         ];
         item.kids.forEach((kidId) {
           children.add(
@@ -50,6 +55,9 @@ class Comment extends StatelessWidget {
         .replaceAll('<p>', '\n\n')
         .replaceAll('</p>', '');
 
-    return Text(text);
+    return Text(
+      text,
+      style: TextStyle(color: Colors.white),
+    );
   }
 }
