@@ -1,17 +1,8 @@
 # hackernews
 
-A new Flutter project.
+Flutter App that fetches Top Stories and comments from the HackerNews API by YCombinator.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# Hacker-News-App
+# Features
+## (1)Live data fetching from JSON API
+## (2)Stores pre-fetched data in an sqlite database
+## (3)Live refresh by pulling down instead of hot restarting the code
